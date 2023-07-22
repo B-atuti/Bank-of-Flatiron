@@ -25,7 +25,7 @@ You need to have Node.js and npm (Node Package Manager) installed on your machin
 
 1. Clone this GitHub repository to your local machine:
 
-  git clone 
+  git clone git@github.com:B-atuti/Bank-of-Flatiron.git
 
 2. Navigate to the project directory:
 
