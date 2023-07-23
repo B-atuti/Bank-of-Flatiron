@@ -27,7 +27,7 @@ const TransactionFormFields = ({ newTransaction, handleInputChange }) => {
       <input
         type="text"
         name="amount"
-        value={newTransaction.amount}
+        value={newTransaction.amount === null ? '' : newTransaction.amount}
         onChange={handleInputChange}
         placeholder="Amount"
       />

@@ -1,14 +1,15 @@
+// TransactionRow.js
 import React from 'react';
 
 function TransactionRow({ transaction }) {
   return (
-    <tr key={transaction.id}>
+    <tr>
       <td>{transaction.date}</td>
       <td>{transaction.description}</td>
       <td>
-        {typeof transaction.amount === 'number'
-          ? `$${transaction.amount.toFixed(2)}`
-          : 'Invalid amount'}
+        {transaction.amount === null
+          ? 'No amount provided'
+          : `$${transaction.amount.toFixed(2)}`}
       </td>
     </tr>
   );

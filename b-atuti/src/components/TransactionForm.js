@@ -1,3 +1,4 @@
+// TransactionForm.js
 import React, { useState } from 'react';
 import TransactionFormFields from './TransactionFormFields';
 
@@ -16,7 +17,14 @@ const TransactionForm = ({ addTransaction }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTransaction(newTransaction);
+    const amountValue = parseFloat(newTransaction.amount);
+
+    if (!isNaN(amountValue)) {
+      addTransaction({ ...newTransaction, amount: amountValue });
+    } else {
+      addTransaction({ ...newTransaction, amount: null });
+    }
+
     setNewTransaction({
       date: '',
       description: '',
@@ -31,7 +39,7 @@ const TransactionForm = ({ addTransaction }) => {
         newTransaction={newTransaction}
         handleInputChange={handleInputChange}
       />
-      <button type="submit"> Add  </button>
+      <button type="submit"> Add Transaction </button>
     </form>
   );
 };

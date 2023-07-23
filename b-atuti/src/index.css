@@ -35,14 +35,23 @@ td {
 input {
   margin: 7px;
   padding: .4rem;
+  border-radius: 10px;
 }
 button {
-  margin: 15px;
-  padding: .3rem ;
-  width: 10%;
-  background: whitesmoke;
-}
-button:hover{
+  padding: 0 20px;
+  height: 40px;
+  display: inline-block;
+  line-height: 40px;
   background: red;
   color: whitesmoke;
+  border: none;
+  border-radius: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all .30s;
+}
+button:hover{
+  background: wheat;
+  color: black;
 }

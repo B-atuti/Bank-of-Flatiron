@@ -7,7 +7,6 @@ import '../App.css';
 function App() {
   const [transactions, setTransactions] = useState([]);
 
-  // Fetch transactions data from the JSON DB server on component mount
   useEffect(() => {
     fetch('http://localhost:8001/transactions')
       .then((response) => response.json())
@@ -15,12 +14,10 @@ function App() {
       .catch((error) => console.log(error));
   }, []);
 
-  // Function to add a new transaction
   const addTransaction = (newTransaction) => {
     setTransactions([...transactions, newTransaction]);
   };
 
-  // Function to filter transactions based on the search query
   const handleFilterTransactions = (searchTerm) => {
     const filteredTransactions = transactions.filter(
       (transaction) =>
