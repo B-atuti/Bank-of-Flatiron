@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: aqua;
+  background: black;
+
+}
+.App {
+  text-align: center;
+  padding: 20px;
+  color: red;
+}
+
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color:blue;
+  color: whitesmoke;
+}
+td {
+  color: wheat;
+}
+input {
+  margin: 7px;
+  padding: .4rem;
+}
+button {
+  margin: 15px;
+  padding: .3rem ;
+  width: 10%;
+  background: whitesmoke;
+}
+button:hover{
+  background: red;
+  color: whitesmoke;
+}
