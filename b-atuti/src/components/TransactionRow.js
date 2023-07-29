@@ -5,6 +5,7 @@ function TransactionRow({ transaction }) {
     <tr key={transaction.id}>
       <td>{transaction.date}</td>
       <td>{transaction.description}</td>
+      <td>{transaction.category}</td>
       <td>
         {typeof transaction.amount === 'number'
           ? `$${transaction.amount.toFixed(2)}`
